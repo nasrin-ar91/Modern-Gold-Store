@@ -1,27 +1,12 @@
-import { NavLink } from "react-router-dom";
-import { ROUTES } from "../../router/router";
+import { navbar } from "../../constants/navbarList";
+import NavItem from "../../utils/NavLink";
 
-export default function Navbar() {
+export default function Navbar({ className }: { className?: string }) {
 	return (
-		<div className="hidden items-center gap-12 md:flex *:text-xl *:font-bold">
-			<NavLink
-				className={({ isActive }) => (isActive ? "text-secondry" : "unset")}
-				to={ROUTES.home}
-			>
-				Home
-			</NavLink>
-			<NavLink
-				className={({ isActive }) => (isActive ? "text-secondry" : "unset")}
-				to={ROUTES.aboutUs}
-			>
-				About-us
-			</NavLink>
-			<NavLink
-				className={({ isActive }) => (isActive ? "text-secondry" : "unset")}
-				to={ROUTES.contacts}
-			>
-				Contact-us
-			</NavLink>
+		<div
+			className={`${className} md:flex items-center gap-10 *:text-lg *:font-bold *:text-text`}
+		>
+			{navbar.map((item) => NavItem(item))}
 		</div>
 	);
 }

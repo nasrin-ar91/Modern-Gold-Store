@@ -1,8 +1,8 @@
 import AboutUsPage from "../pages/about-us/AboutUsPage";
+import AuthPage from "../pages/auth/AuthPage";
 import CartPage from "../pages/carts/CartPage";
 import ContactPage from "../pages/contact/ContactPage";
 import HomePage from "../pages/home/HomePage";
-import LoginPage from "../pages/login/LoginPage";
 import ProductsPage from "../pages/products/ProductsPage";
 
 export const ROUTES = {
@@ -11,7 +11,7 @@ export const ROUTES = {
 	carts: "/carts",
 	aboutUs: "/about-us",
 	contacts: "/contacts",
-	login: "/login",
+	auth: "/auth",
 };
 
 export const routes = [
@@ -20,5 +20,5 @@ export const routes = [
 	{ element: <ProductsPage />, path: ROUTES.products },
 	{ element: <AboutUsPage />, path: ROUTES.aboutUs },
 	{ element: <ContactPage />, path: ROUTES.contacts },
-	{ element: <LoginPage />, path: ROUTES.login },
+	{ element: <AuthPage />, path: ROUTES.auth },
 ];

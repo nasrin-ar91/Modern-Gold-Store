@@ -1,9 +1,12 @@
+import { ModalProvider } from "./contex/modalProvider";
 import AppRouter from "./router/AppRouter";
 
 function App() {
 	return (
 		<>
-			<AppRouter />
+			<ModalProvider>
+				<AppRouter />
+			</ModalProvider>
 		</>
 	);
 }
